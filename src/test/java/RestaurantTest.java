@@ -77,4 +77,17 @@ class RestaurantTest {
         //Assert
         assertThat(totalOrderValue, equalTo(358));
     }
+    // >>>>>>>>>>>>>>>>>>>"PART 3: FAILING TEST CASE" USING TDD BELOW <<<<<<<<<<<<<<<<<<<<<<
+
+    // >>>>>>>>>>>>>>>>>>>"PART 3: PASSING TEST CASE" USING TDD BELOW <<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void order_value_should_be_388_when_sweetcornsoup_and_vegetable_lasagne_is_ordered() throws restaurantNotFoundException {
+        //Arrange
+        List<String> orderedItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        //Act
+        int totalOrderValue = restaurant.getOrderAmount(orderedItems);
+        //Assert
+        assertThat(totalOrderValue, equalTo(388));
+    }
+    // >>>>>>>>>>>>>>>>>>>"PART 3: PASSING TEST CASE" USING TDD BELOW <<<<<<<<<<<<<<<<<<<<<<
 }
