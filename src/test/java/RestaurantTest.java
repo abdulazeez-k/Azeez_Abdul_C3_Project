@@ -66,4 +66,15 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    // >>>>>>>>>>>>>>>>>>>"PART 3: FAILING TEST CASE" USING TDD BELOW <<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void order_value_should_be_358_when_sweetcornsoup_and_vegetable_lasagne_is_ordered() throws restaurantNotFoundException {
+        //Arrange
+        List<String> orderedItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        //Act
+        int totalOrderValue = restaurant.getOrderAmount(orderedItems);
+        //Assert
+        assertThat(totalOrderValue, equalTo(358));
+    }
 }
